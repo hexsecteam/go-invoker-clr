@@ -1,20 +1,35 @@
 # go-invoker-clr
 
-## Purpose
 
 The purpose of this project is to provide a Go implementation for hosting and executing .NET assemblies with advanced stealth and evasion capabilities. It enables the execution of .NET payloads from Go code, bypassing AMSI (Antimalware Scan Interface) without memory patching, by leveraging a custom IHostControl interface. This makes it useful for red teaming, penetration testing, and research into Windows internals and evasion techniques.
 
 ![go-invoker-clr](go-invoker-slr.png)
 
 
-go-invoker-clr CLR is the implementation in Go of [Being a Good CLR Host](https://github.com/passthehashbrowns/Being-A-Good-CLR-Host) by Joshua Magri from IBM X-Force Red.
+**GoInvoker-CLR** is a Go-based implementation inspired by the excellent research **[Being a Good CLR Host](https://github.com/passthehashbrowns/Being-A-Good-CLR-Host)** by **Joshua Magri** from **IBM X-Force Red**.
 
-It is built upon the [go-clr](https://github.com/Ne0nd0g/go-clr) project of Ne0nd0g, who in turn forked and maintained the original poc of [go-clr](https://github.com/ropnop/go-clr) by ropnop.
+> ⚠️ **Credit where credit is due**:  
+> This project builds heavily upon the outstanding work of others in the community.
+
+## Lineage and Acknowledgements
+
+- This project is primarily based on [**go-clr**](https://github.com/Ne0nd0g/go-clr) by **Ne0nd0g**.
+- Ne0nd0g's implementation is itself a maintained and improved fork of the original PoC [**go-clr**](https://github.com/ropnop/go-clr) by **ropnop**.
+- The conceptual foundation and architectural guidance come directly from the write-up [**Being a Good CLR Host**](https://github.com/passthehashbrowns/Being-A-Good-CLR-Host) by **Joshua Magri**, whose insights were essential to this project.
+
+
+
+---
+
+🙏 **Special thanks to**:  
+Joshua Magri, Ne0nd0g, and ropnop — for sharing your work and pushing the community forward.
+
+
 
 The purpose is to create our own `IHostControl` interface allowing us to implement the `ProvideAssembly` method. We can then use `Load_2` method instead of `Load_3`, circumventing AMSI entirely.
 
 
----
+
 
 ## Usage
 
@@ -82,22 +97,3 @@ Thanks to IBM X-Force Red, we got a patchless AMSI bypass that does not rely on 
 
 ## 🤝 Support the HexSec Community
 If you find value in our work and would like to support the HexSec community, you can contribute by making a donation. Your support helps us continue developing innovative and high-quality tools for the cybersecurity and IT community.
-
-**Donate:**
-- **ETH**: `0x3E79B73e3ce33c6B860425DCB40c6D2f4F2aC508`
-- **BTC**: `bc1qpex9u7x4a6kj4nf6fee7mz54vsv4th2rj2pt30`
-
----
-
-## 📬 More Details:
-- Contact on Telegram: [@Hexsecteam](https://t.me/Hexsecteam)
-- Group on Telegram: [@hexsec_tools](https://t.me/hexsec_tools)
-- Vimeo: [https://vimeo.com/hexsec](https://vimeo.com/hexsec)
-- Dailymotion: [https://dailymotion.com/hexsectools](https://dailymotion.com/hexsectools)
-- Medium: [https://medium.com/@hexsectools](https://medium.com/@hexsectools)
-- Facebook: [https://www.facebook.com/hexsexcommunity/](https://www.facebook.com/hexsexcommunity/)
-- YouTube: [https://www.youtube.com/@hex_sec](https://www.youtube.com/@hex_sec)
-
----
-
-> ⚠️ This project is provided for **educational and ethical hacking purposes only**. You are responsible for any use. Unauthorized access or distribution is prohibited by law.
