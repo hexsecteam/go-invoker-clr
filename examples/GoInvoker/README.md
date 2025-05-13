@@ -1,4 +1,4 @@
- # Example Usage - Go Invoker
+# Example Usage - Go Invoker
 
 This will use go to be a good CLR Host for the exe. It will
 
@@ -56,7 +56,15 @@ This solution is ideal for those who want a quick and easy way to build the proj
 Basically we all noticed that a while ago, defender introduced behavioral rules to prevent AMSI memory patching.
 
 Thanks to IBM X-Force Red, we got a patchless AMSI bypass that does not rely on the CPU like for Hardware Break Point !!
+## References
 
+- 📄 **IBM X-Force Red** —  
+  _Being a Good CLR Host: Modernizing Offensive .NET Tradecraft_  
+  [Read the article](https://www.ibm.com/think/x-force/being-a-good-clr-host-modernizing-offensive-net-tradecraft)
+
+- 📄 **NTT Data Security Research** —  
+  _Radar Magazine Supplement – July 2024 (PDF)_  
+  [Download the report](https://www.nttdata.com/global/en/-/media/nttdataglobal/1_files/services/cybersecurity/radar_magazine/2024/radar_supplement_july.pdf?rev=95736bd059584c05a31ef61eec8b83dd)
 
 ## 🤝 Support the HexSec Community
 If you find value in our work and would like to support the HexSec community, you can contribute by making a donation. Your support helps us continue developing innovative and high-quality tools for the cybersecurity and IT community.
