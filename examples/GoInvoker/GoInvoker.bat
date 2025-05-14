@@ -2,10 +2,18 @@
 setlocal enabledelayedexpansion
 title HexSec Go Invoker v1.0
 
+REM ================= DISCLAIMER =====================
+echo =================================================
+echo  This script and its associated tools are strictly
+echo  provided for EDUCATIONAL and RESEARCH purposes.
+echo  Any misuse of this tool is solely the responsibility
+echo  of the end user. The developers take no liability
+echo  for any damage caused.
+echo =================================================
+echo.
+
 
 REM Display ASCII logo
-
-
 echo "+-------------------------------------------------+";
 echo "|  ____         ___                 _             |";
 echo "| / ___| ___   |_ _|_ ____   _____ | | _____ _ __ |";
